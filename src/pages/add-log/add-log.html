@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar transparent>
+   <ion-title>Add Coffee Log</ion-title>
+   <ion-buttons end>
+     <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+   </ion-buttons>
+  </ion-toolbar>
+ </ion-header>
+  
+ <ion-content>
+  
+   <ion-list no-lines>
+  
+     <!-- <ion-item>
+       <ion-label floating>Title</ion-label>
+       <ion-input [(ngModel)]="title" type="text"></ion-input>
+     </ion-item> -->
+  
+     <ion-item>
+       <ion-label floating>Log</ion-label>
+       <ion-textarea [(ngModel)]="notes"></ion-textarea>
+     </ion-item>
+  
+     <ion-item>
+         <ion-input [(ngModel)]="rating" type="number"></ion-input>
+     </ion-item>
+  
+   </ion-list>
+  
+   <button ion-button full color="secondary" (click)="save()">Save</button>
+  
+ </ion-content>
