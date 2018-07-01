@@ -10,12 +10,14 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { CoffeeLoggerPage } from '../pages/coffee-logger/coffee-logger';
 import { Logger } from '../providers/logger/logger';
+import { AddLogPage } from '../pages/add-log/add-log';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    CoffeeLoggerPage
+    CoffeeLoggerPage,
+    AddLogPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { Logger } from '../providers/logger/logger';
   entryComponents: [
     MyApp,
     HomePage,
-    CoffeeLoggerPage
+    CoffeeLoggerPage,
+    AddLogPage
   ],
   providers: [
     StatusBar,

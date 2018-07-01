@@ -17,19 +17,20 @@ export class HomePage {
 
   ionViewDidLoad(){
  
-    // this.logService.getLogs().then((data) => {
-    //   console.log(data);
-    //   this.logs = data;
-    // });
+    this.logService.getLogs().then((data) => {
+      console.log(data);
+      this.logs = data;
+    });
  
   }
 
   addLog(){
- 
+
     let modal = this.modalCtrl.create(AddLogPage);
  
     modal.onDidDismiss(log => {
       if(log){
+        debugger;
         this.logs.push(log);
         // this.logService.createReview(log);    
       }
