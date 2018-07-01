@@ -21,9 +21,16 @@
        <ion-textarea [(ngModel)]="notes"></ion-textarea>
      </ion-item>
   
-     <ion-item>
+     <!-- <ion-item>
          <ion-input [(ngModel)]="rating" type="number"></ion-input>
-     </ion-item>
+     </ion-item> -->
+
+     <ion-item>
+      <ion-range min="0" max="100" pin="true" [(ngModel)]="rating">
+        <ion-icon range-left name="sad"></ion-icon>
+        <ion-icon range-right name="happy"></ion-icon>
+      </ion-range>
+    </ion-item>
   
    </ion-list>
   

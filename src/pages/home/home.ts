@@ -30,9 +30,8 @@ export class HomePage {
  
     modal.onDidDismiss(log => {
       if(log){
-        debugger;
         this.logs.push(log);
-        // this.logService.createReview(log);    
+        this.logService.createReview(log); 
       }
     });
  
@@ -50,7 +49,7 @@ export class HomePage {
       }  
  
     //Remove from database
-    // this.logService.deleteReview(log._id);
+    this.logService.deleteReview(log._id);
   }
 
 }
