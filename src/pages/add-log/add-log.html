@@ -1,39 +1,61 @@
 <ion-header>
   <ion-toolbar transparent>
-   <ion-title>Add Coffee Log</ion-title>
-   <ion-buttons end>
-     <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
-   </ion-buttons>
+    <ion-title>Add Coffee Log</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-toolbar>
- </ion-header>
-  
- <ion-content>
-  
-   <ion-list no-lines>
-  
-     <!-- <ion-item>
+</ion-header>
+
+<ion-content>
+
+  <ion-list no-lines>
+
+    <!-- <ion-item>
        <ion-label floating>Title</ion-label>
        <ion-input [(ngModel)]="title" type="text"></ion-input>
      </ion-item> -->
-  
-     <ion-item>
-       <ion-label floating>Log</ion-label>
-       <ion-textarea [(ngModel)]="notes"></ion-textarea>
-     </ion-item>
-  
-     <!-- <ion-item>
+
+    <ion-item>
+      <ion-label floating>Type of Coffee:</ion-label>
+      <ion-select [(ngModel)]="brewType">
+        <ion-option value="drip">Drip</ion-option>
+        <ion-option value="pourOver">Pour Over</ion-option>
+        <ion-option value="espresso">Espresso</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item *ngIf="brewType == 'espresso'">
+      <ion-label floating>Type of espresso drink:</ion-label>
+      <ion-select [(ngModel)]="espressoType">
+        <ion-option value="latte">Latte</ion-option>
+        <ion-option value="cappucino">Cappucino</ion-option>
+        <ion-option value="cortado">Cortado</ion-option>
+        <ion-option value="americano">Americano</ion-option>
+        <ion-option value="flatWhite">Flat White</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Log</ion-label>
+      <ion-textarea [(ngModel)]="notes"></ion-textarea>
+    </ion-item>
+
+    <!-- <ion-item>
          <ion-input [(ngModel)]="rating" type="number"></ion-input>
      </ion-item> -->
 
-     <ion-item>
+    <ion-item>
       <ion-range min="0" max="100" pin="true" [(ngModel)]="rating">
         <ion-icon range-left name="sad"></ion-icon>
         <ion-icon range-right name="happy"></ion-icon>
       </ion-range>
     </ion-item>
-  
-   </ion-list>
-  
-   <button ion-button full color="secondary" (click)="save()">Save</button>
-  
- </ion-content>
+
+  </ion-list>
+
+  <button ion-button full color="secondary" (click)="save()">Save</button>
+
+</ion-content>

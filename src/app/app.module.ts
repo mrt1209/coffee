@@ -34,8 +34,8 @@ import { AddLogPage } from '../pages/add-log/add-log';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     Logger
   ]
 })
-export class AppModule {}
+export class AppModule { }

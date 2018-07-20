@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
+// import { BrewType } from '../../objects/brewType'
 
 /**
  * Generated class for the AddLogPage page.
@@ -19,6 +20,19 @@ export class AddLogPage {
   // title: any;
   notes: any;
   rating: any;
+  user_id: any;
+  // user = {} as User;
+  // brewType: BrewType = { name: '', espressoType: '' };
+  brewType: any;
+  espressoType: any;
+  bean_id: any;
+  bean: any;
+  date: any;
+  shop_id: any;
+  shop: any;
+  barista_id: any;
+  barista: any;
+  espresso: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
   }
@@ -28,17 +42,26 @@ export class AddLogPage {
   }
 
   save(): void {
- 
+
     let log = {
-      // title: this.title,
       notes: this.notes,
-      rating: this.rating
+      rating: this.rating,
+      user_id: this.user_id,
+      brewType: this.brewType,
+      espressoType: this.espressoType,
+      bean_id: this.bean_id,
+      bean: this.bean,
+      date: this.date,
+      shop_id: this.shop_id,
+      shop: this.shop,
+      barista_id: this.barista_id,
+      barista: this.barista
     };
- 
+
     this.viewCtrl.dismiss(log);
- 
+
   }
- 
+
   close(): void {
     this.viewCtrl.dismiss();
   }
